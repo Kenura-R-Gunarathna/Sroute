@@ -34,7 +34,7 @@ $route->get('/', 'welcome.html');
 $route->get('/contact', 'contact.html');
 
 /*
-s
+
 $route->post($uri, $callback);
 $route->put($uri, $callback);
 $route->patch($uri, $callback);
