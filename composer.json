@@ -1,0 +1,19 @@
+{
+    "name": "kenura-r-gunarathna/sroute",
+    "description": "Simple Routing Package",
+    "type": "package",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "KenuraRGunarathna\\Sroute\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kenura R. Gunarathna",
+            "email": "kenuragunarathna@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
