@@ -45,18 +45,93 @@ class Route
     }
     public function post(string $uri, string  $callback)
     {
+        $this->uri = $uri;
+        $this->callback = $callback;
+
+        $this->requestMethod = $_SERVER['REQUEST_METHOD'];
+        $this->requestURI = $_SERVER['REQUEST_URI'];
+        $this->requestFile = "./views/" . $callback;
+
+        $this->urls[$uri] = $callback;
+
+        if ($this->requestMethod != "POST") {
+            echo "Invalid method";
+            return true;
+        }
+
+        return $this->viewFile();
     }
     public function put(string $uri, string $callback)
     {
+        $this->uri = $uri;
+        $this->callback = $callback;
+
+        $this->requestMethod = $_SERVER['REQUEST_METHOD'];
+        $this->requestURI = $_SERVER['REQUEST_URI'];
+        $this->requestFile = "./views/" . $callback;
+
+        $this->urls[$uri] = $callback;
+
+        if ($this->requestMethod != "PUT") {
+            echo "Invalid method";
+            return true;
+        }
+
+        return $this->viewFile();
     }
     public function patch(string $uri, string  $callback)
     {
+        $this->uri = $uri;
+        $this->callback = $callback;
+
+        $this->requestMethod = $_SERVER['REQUEST_METHOD'];
+        $this->requestURI = $_SERVER['REQUEST_URI'];
+        $this->requestFile = "./views/" . $callback;
+
+        $this->urls[$uri] = $callback;
+
+        if ($this->requestMethod != "PATCH") {
+            echo "Invalid method";
+            return true;
+        }
+
+        return $this->viewFile();
     }
     public function delete(string $uri, string $callback)
     {
+        $this->uri = $uri;
+        $this->callback = $callback;
+
+        $this->requestMethod = $_SERVER['REQUEST_METHOD'];
+        $this->requestURI = $_SERVER['REQUEST_URI'];
+        $this->requestFile = "./views/" . $callback;
+
+        $this->urls[$uri] = $callback;
+
+        if ($this->requestMethod != "DELETE") {
+            echo "Invalid method";
+            return true;
+        }
+
+        return $this->viewFile();
     }
     public function options(string $uri, string $callback)
     {
+        $this->uri = $uri;
+        $this->callback = $callback;
+
+        $this->requestMethod = $_SERVER['REQUEST_METHOD'];
+        $this->requestURI = $_SERVER['REQUEST_URI'];
+        $this->requestFile = "./views/" . $callback;
+
+        $this->urls[$uri] = $callback;
+
+        if ($this->requestMethod != "OPTIONS") {
+            echo "Invalid method";
+            return true;
+        }
+
+        return $this->viewFile();
     }
 
     private function viewFile()
